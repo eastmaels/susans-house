@@ -30,6 +30,24 @@
                     .activeOnClick();
                     $('#flubber').spRelSpeed(8);
 
+// spritely methods...               
+$('#flubber2')
+.sprite({ fps: 10, no_of_frames: 2 })
+.isDraggable({
+    start: function () {
+        if (!$.browser.msie) {
+            $('#flubber2').fadeTo('fast', 0.7);
+        }
+    },
+    stop: function () {
+        if (!$.browser.msie) {
+            $('#flubber2').fadeTo('slow', 1);
+        }
+    }
+})
+.activeOnClick();
+$('#flubber2').spRelSpeed(8);
+
                 // $('html').flyToTap();
                 if (!window.app.is_ipad && document.location.hash.indexOf('iphone') > -1) {
                     // iPhone/iPad
@@ -37,6 +55,7 @@
                     // bird constraint is slightly smaller
                     //$('#bird').spRandom({ top: -10, left: -10, right: 150, bottom: 100, speed: 3500, pause: 5000 });
                     $('#flubber').spRandom({ top: 70, left: 100, right: 200, bottom: 340, speed: 4000, pause: 3000 });
+                    $('#flubber2').spRandom({ top: 70, left: 100, right: 200, bottom: 340, speed: 4000, pause: 3000 });
                     if (document.location.hash.indexOf('iphone') > -1) {
                         $('body').addClass('platform-iphone');
                     }
