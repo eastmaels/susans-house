@@ -157,48 +157,48 @@
                       <div class="wrapper">
                       <!-- START CONTAINER-->
 	                    <div class="container">
-
-<!-- The Modal -->
-<div id="id01" class="w3-modal">
-<div class="w3-modal-content">
-<div class="w3-container">
-<span onclick="document.getElementById('id01').style.display='none'" 
-class="w3-button w3-display-topright">&times;</span>
-<p>Some text in the Modal..</p>
-<p>Some text in the Modal..</p>
-</div>
-</div>
-</div>
                             <div id="three-columns" class="grid-container">
 			                    <ul class="rig columns-3 gallery2">
                                  <!-- START ITEM -->
 				                    <li>
 					                    <img src="images/thumb/002.jpg" alt="Watch Idol Philippines"/>
-                                            <h3>Watch Idol Philippines</h3>
+                                            <h3>
+                                                <button onclick="document.getElementById('watch').style.display='block'"
+                                                    class="w3-button">Watch Idol Philippines</button>
+                                            </h3>
 					                        <p>Idol Philippines, formally known by its title as the Search for the Idol Philippines, is a Philippine reality singing television competition on ABS-CBN to find new solo singing talents.</p>
-                                            <button onclick="document.getElementById('id01').style.display='block'"
-                                            class="w3-button">Watch Idol Philippines</button>
                                         </li>   
                                 <!-- END ITEM -->       
                                  <!-- START ITEM -->
 				                    <li>
 					                    <img src="images/in-the-garden.jpg" alt="See the Garden"/>
-					                        <h3>See the Garden</h3>
-					                        <p>Vivamus at sapien eget tellus sodales tempor. Phasellus et varius magna.</p>
+                                            <h3>
+                                                <button onclick="document.getElementById('garden').style.display='block'"
+                                                    class="w3-button">See the Garden</button>
+                                            </h3>
+					                        <p>A garden is a planned space, usually outdoors, set aside for the display, cultivation, or enjoyment of plants and other forms of nature.</p>
 				                    </li>   
                                 <!-- END ITEM -->       
                                  <!-- START ITEM -->
 				                    <li>
 					                    <img src="images/thumb/005.jpg" alt="Take a Break"/>
-					                        <h3>Take a Break</h3>
-					                        <p>Vivamus at sapien eget tellus sodales tempor. Phasellus et varius magna.</p>
+                                            <h3>
+                                                <button onclick="document.getElementById('break').style.display='block'"
+                                                    class="w3-button">Take a Break</button>
+                                            </h3>
+                                            <p>Recess is a general term for a period in which a group of people are temporarily dismissed from their duties.</p>
+                                            <p>This was and still our favorite subject in school.</p>
 				                    </li>   
                                 <!-- END ITEM -->       
                                  <!-- START ITEM -->
 				                    <li>
 					                    <img src="images/thumb/006.jpg" alt="Take a Nap" />
-					                        <h3>Take a Nap</h3>
-					                        <p>Vivamus at sapien eget tellus sodales tempor. Phasellus et varius magna.</p>
+                                            <h3>
+                                                <button onclick="document.getElementById('break').style.display='block'"
+                                                    class="w3-button">Take a Nap</button>
+                                            </h3>
+                                            <p>Sleep is a naturally recurring state of mind and body, characterized by altered consciousness, relatively inhibited sensory activity, inhibition of nearly all voluntary muscles, and reduced interactions with surroundings.</p>
+                                            <p>When you feel tired and need to take a rest, go the bedroom to take a nap.</p>
 				                    </li>   
                                 <!-- END ITEM -->                 				
 			                    </ul>
@@ -208,8 +208,57 @@ class="w3-button w3-display-topright">&times;</span>
                     </div>
                     </div>
                 </section>
-                <div class="arrow">
-                </div>
+<!-- The Modal -->
+<div id="watch" class="w3-modal">
+    <div class="w3-modal-content">
+        <div class="w3-container">
+            <span onclick="document.getElementById('watch').style.display='none'" 
+                class="w3-button w3-display-topright">&times;</span>
+            <p>Some text in the Modal..</p>
+            <p>Some text in the Modal..</p>
+        </div>
+    </div>
+</div>
+
+<!-- The Modal -->
+<div id="garden" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container">
+                <span onclick="document.getElementById('garden').style.display='none'" 
+                    class="w3-button w3-display-topright">&times;</span>
+                <p>Some text in the Modal..</p>
+                <p>Some text in the Modal..</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+<div id="break" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container">
+                <span onclick="document.getElementById('break').style.display='none'" 
+                    class="w3-button w3-display-topright">&times;</span>
+                <p>Some text in the Modal..</p>
+                <p>Some text in the Modal..</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+<div id="nap" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container">
+                <span onclick="document.getElementById('nap').style.display='none'" 
+                    class="w3-button w3-display-topright">&times;</span>
+                <p>Some text in the Modal..</p>
+                <p>Some text in the Modal..</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+
             </div>
             <!-- END PORTFOLIO SECTION -->
             <!-- START TEAM SECTION -->
