@@ -59,9 +59,13 @@
             </header>
                     <!-- END HEADER -->
                     <!-- START LOGO -->
-                    <div class="main-logo" style="display: flex; flex-wrap: wrap; justify-content: center">
+                    <div class="main-logo animsition" style="display: flex; flex-wrap: wrap; justify-content: center">
                         <img src="images/mama/mama_if_i_agree_sm.jpg">                        
-                        <a href="#about">
+                        <a href="#about"
+                            class="animsition-link"
+                            data-animsition-out-class="fade-out-right"
+                            data-animsition-out-duration="2000"
+                        >
                             <img src="images/mama/next_arrow_resize.gif" style="width: 100px">
                         </a>
                     </div>
@@ -462,9 +466,9 @@
         });
         function displayHappyMama() {
             if(count >= 4) {
-                setTimeout(3000, function() {
+                setTimeout(function() {
                     $('#happy-mama-li').show();
-                })
+                }, 3000)
             }
         }
     </script>
