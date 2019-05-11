@@ -236,11 +236,11 @@
                             <div id="three-columns" class="grid-container">
 			                    <ul class="rig columns-3 gallery2">
                                  <!-- START ITEM -->
-				                    <li>
+				                    <li id="watch-li">
 					                    <img src="images/mama/idol_philippines.jpg" alt="Watch Idol Philippines"/>
                                             <h3>
-                                                <a data-izimodal-open="#watch" data-izimodal-transitionin="fadeInDown">
-                                                        Watch Idol Philippines
+                                                <a id="watch-trigger" data-izimodal-open="#watch" data-izimodal-transitionin="fadeInDown">
+                                                    Watch Idol Philippines
                                                 </a>
                                             </h3>
                                             <p>Idol Philippines, formally known by its title as the Search for the Idol Philippines, is a Philippine reality singing television competition on ABS-CBN to find new solo singing talents.</p>
@@ -248,10 +248,10 @@
                                         </li>   
                                 <!-- END ITEM -->       
                                  <!-- START ITEM -->
-				                    <li>
+				                    <li id="garden-li">
 					                    <img src="images/in-the-garden.jpg" alt="See the Garden"/>
                                             <h3>
-                                                <a data-izimodal-open="#garden" data-izimodal-transitionin="fadeInDown">
+                                                <a id="garden-trigger" data-izimodal-open="#garden" data-izimodal-transitionin="fadeInDown">
                                                     See the Garden
                                                 </a>
                                             </h3>
@@ -260,30 +260,31 @@
 				                    </li>   
                                 <!-- END ITEM -->       
                                  <!-- START ITEM -->
-				                    <li>
+				                    <li id="break-li" >
 					                    <img src="images/thumb/006.jpg" alt="Take a Break"/>
                                             <h3>
-                                                <a data-izimodal-open="#break" data-izimodal-transitionin="fadeInDown">
+                                                <a id="break-trigger" data-izimodal-open="#break" data-izimodal-transitionin="fadeInDown">
                                                     Take a Break
                                                 </a>
                                             </h3>
                                             <p>Recess is a general term for a period in which a group of people are temporarily dismissed from their duties.</p>
                                             <p>This was and still your favorite subject in school.</p>
 				                    </li>   
-                                <!-- END ITEM -->       
-                                 <!-- START ITEM -->
-				                    <li>
+				                    <li id="nap-li" >
 					                    <img src="images/mama/sleepy.jpg" alt="Take a Nap" />
                                             <h3>
-                                                <a data-izimodal-open="#nap" data-izimodal-transitionin="fadeInDown">
+                                                <a id="nap-trigger" data-izimodal-open="#nap" data-izimodal-transitionin="fadeInDown">
                                                     Take a Nap
                                                 </a>
                                             </h3>
                                             <p>Sleep is a naturally recurring state of mind and body, characterized by altered consciousness, relatively inhibited sensory activity, inhibition of nearly all voluntary muscles, and reduced interactions with surroundings.</p>
                                             <p>When you feel tired and need to take a rest, you go to your bedroom to take a nap.</p>
 				                    </li>   
-                                <!-- END ITEM -->                 				
-			                    </ul>
+                                    <li id="happy-mama-li" style="display: none">
+                                        <h3>Happy Mother's Day!</h3>
+                                        <img src="images/mama/final_happy_mama.jpg" alt="Happy Mama's Day!" />
+                                    </li>   
+                                </ul>
 		                    </div>
 	                    </div>
 	                <!-- END CONTAINER-->
@@ -441,9 +442,33 @@
         $("#nap").iziModal();
         $("#break").iziModal();
         $("#watch").iziModal();
+
+        $('#garden-trigger').click(function() {
+            $('#garden-li').hide();
+            displayHappyMama();
+        });
+        $('#break-trigger').click(function() {
+            $('#break-li').hide();
+            displayHappyMama();
+        });
+        $('#watch-trigger').click(function() {
+            $('#watch-li').hide();
+            displayHappyMama();
+        });
+        $('#nap-trigger').click(function() {
+            $('#nap-li').hide();
+            displayHappyMama();
+        });
         $('.majorpoints').click(function(){
             $(this).find('.hider').toggle();
         });
+        function displayHappyMama() {
+            if(!$('#garden-li').is(':visible')
+                && !$('#break-li').is(':visible')
+                && !$('#nap-li').is(':visible')
+                && !$('#watch-li').is(':visible')
+            ) $('#happy-mama-li').show()
+        }
     </script>
 
     <script type="text/javascript"><!--
