@@ -239,7 +239,7 @@
 				                    <li id="watch-li">
 					                    <img src="images/mama/idol_philippines.jpg" alt="Watch Idol Philippines"/>
                                             <h3>
-                                                <a id="watch-trigger" data-izimodal-open="#watch" data-izimodal-transitionin="fadeInDown">
+                                                <a id="watch-trigger" data-izimodal-open="#watch" data-izimodal-transitionin="comingIn">
                                                     Watch Idol Philippines
                                                 </a>
                                             </h3>
@@ -251,7 +251,7 @@
 				                    <li id="garden-li">
 					                    <img src="images/in-the-garden.jpg" alt="See the Garden"/>
                                             <h3>
-                                                <a id="garden-trigger" data-izimodal-open="#garden" data-izimodal-transitionin="fadeInDown">
+                                                <a id="garden-trigger" data-izimodal-open="#garden" data-izimodal-transitionin="comingIn">
                                                     See the Garden
                                                 </a>
                                             </h3>
@@ -263,7 +263,7 @@
 				                    <li id="break-li" >
 					                    <img src="images/thumb/006.jpg" alt="Take a Break"/>
                                             <h3>
-                                                <a id="break-trigger" data-izimodal-open="#break" data-izimodal-transitionin="fadeInDown">
+                                                <a id="break-trigger" data-izimodal-open="#break" data-izimodal-transitionin="comingIn">
                                                     Take a Break
                                                 </a>
                                             </h3>
@@ -273,7 +273,7 @@
 				                    <li id="nap-li" >
 					                    <img src="images/mama/sleepy.jpg" alt="Take a Nap" />
                                             <h3>
-                                                <a id="nap-trigger" data-izimodal-open="#nap" data-izimodal-transitionin="fadeInDown">
+                                                <a id="nap-trigger" data-izimodal-open="#nap" data-izimodal-transitionin="comingIn">
                                                     Take a Nap
                                                 </a>
                                             </h3>
@@ -438,10 +438,10 @@
     <script type="text/javascript" src="js/jquery.spritely-0.6.8.js"></script>
     <script src="js/jquery.fancybox.pack.js" type="text/javascript"></script>
     <script type="text/javascript">
-        $("#garden").iziModal();
-        $("#nap").iziModal();
-        $("#break").iziModal();
-        $("#watch").iziModal();
+        $("#garden").iziModal({openFullscreen: true});
+        $("#nap").iziModal({openFullscreen: true});
+        $("#break").iziModal({openFullscreen: true});
+        $("#watch").iziModal({openFullscreen: true});
 
         $('#garden-trigger').click(function() {
             $('#garden-li').hide();
