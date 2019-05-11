@@ -116,20 +116,14 @@
                                 </ul>
                                 <a href="#portfolio">
                                 <span>
-                                    <svg style="display: float-left" width="7px" height="5px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <g>
-                                            <polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
-                                            <polygon class="arrow-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
-                                            <path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
-                                        </g>
-                                    </svg>
+                                    <img src="images/mama/next_arrow_resize.gif"/>
                                 </span>
                                 </a>
                             </div>
                         </div>
                         <div id="who-image">
                             <div class="overlay"></div>
-                            <img src="images/dude.png" alt="John Deo">
+                            <img src="images/mama/tron_thumbs_up_resize.jpeg" style="width: 300px; height: auto">
                         </div>
                     </section>
             </div>
@@ -438,36 +432,41 @@
     <script type="text/javascript" src="js/jquery.spritely-0.6.8.js"></script>
     <script src="js/jquery.fancybox.pack.js" type="text/javascript"></script>
     <script type="text/javascript">
+        var count = 0;
         $("#garden").iziModal({openFullscreen: true});
         $("#nap").iziModal({openFullscreen: true});
         $("#break").iziModal({openFullscreen: true});
         $("#watch").iziModal({openFullscreen: true});
 
         $('#garden-trigger').click(function() {
-            $('#garden-li').hide();
+            count = count + 1
+            $('#garden-li').hide(3000);
             displayHappyMama();
         });
         $('#break-trigger').click(function() {
-            $('#break-li').hide();
+            count = count + 1
+            $('#break-li').hide(3000);
             displayHappyMama();
         });
         $('#watch-trigger').click(function() {
-            $('#watch-li').hide();
+            count = count + 1
+            $('#watch-li').hide(3000);
             displayHappyMama();
         });
         $('#nap-trigger').click(function() {
-            $('#nap-li').hide();
+            count = count + 1
+            $('#nap-li').hide(3000);
             displayHappyMama();
         });
         $('.majorpoints').click(function(){
             $(this).find('.hider').toggle();
         });
         function displayHappyMama() {
-            if(!$('#garden-li').is(':visible')
-                && !$('#break-li').is(':visible')
-                && !$('#nap-li').is(':visible')
-                && !$('#watch-li').is(':visible')
-            ) $('#happy-mama-li').show()
+            if(count >= 4) {
+                setTimeout(3000, function() {
+                    $('#happy-mama-li').show();
+                })
+            }
         }
     </script>
 
