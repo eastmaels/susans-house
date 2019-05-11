@@ -17,6 +17,7 @@
     <!-- PrettyPhoto -->
     <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
     <link rel="stylesheet" type="text/css" href="css/arrow.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- Fancybox -->
     <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen">
     <link rel="shortcut icon" href="images/favicon.ico" />
@@ -156,16 +157,27 @@
                       <div class="wrapper">
                       <!-- START CONTAINER-->
 	                    <div class="container">
-		                    <div id="three-columns" class="grid-container">
+
+<!-- The Modal -->
+<div id="id01" class="w3-modal">
+<div class="w3-modal-content">
+<div class="w3-container">
+<span onclick="document.getElementById('id01').style.display='none'" 
+class="w3-button w3-display-topright">&times;</span>
+<p>Some text in the Modal..</p>
+<p>Some text in the Modal..</p>
+</div>
+</div>
+</div>
+                            <div id="three-columns" class="grid-container">
 			                    <ul class="rig columns-3 gallery2">
                                  <!-- START ITEM -->
 				                    <li>
 					                    <img src="images/thumb/002.jpg" alt="Watch Idol Philippines"/>
                                             <h3>Watch Idol Philippines</h3>
 					                        <p>Idol Philippines, formally known by its title as the Search for the Idol Philippines, is a Philippine reality singing television competition on ABS-CBN to find new solo singing talents.</p>
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                                Watch Idol Philippines
-                                            </button>
+                                            <button onclick="document.getElementById('id01').style.display='block'"
+                                            class="w3-button">Watch Idol Philippines</button>
                                         </li>   
                                 <!-- END ITEM -->       
                                  <!-- START ITEM -->
