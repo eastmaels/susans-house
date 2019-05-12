@@ -157,16 +157,22 @@
                         <div id="watch" data-iziModal-fullscreen="true"  data-iziModal-title="Watching Idol Philippines"  data-iziModal-icon="icon-home"
                             style="margin-left: 10px; margin-right: 10px" data-padding="10px">
                             <!-- Modal content -->
-                            <p></p>
+                            <p>Watching TV is one of your favorite past times when you don't have any house chores to do.</p>
+                            <p>You usually watch <strong>"It's show time"</strong>, but since it's a Sunday, you'd watch Idol Philippines instead...</p>
                             <hr/>
-                            <p>There seems to be a note stuck under the remote. Would you like to take a look?</p>
+                            <p>You wonder where the remote could be...</p>
                             <p>
                                 <fieldset class="majorpoints">
                                 <legend class="majorpointslegend">...</legend>
                                 <div class="hider" style="display:none" >
                                     <h3>You've found a letter!</h3>
-                                    <p>
-                                    </p>
+                                    <p>Dear Ma,</p>
+                                    <p>Happy Mother's day.</p>
+                                    <p>I just would like to express my appreciation for all your and Papa's sacrifices, not just for me and my family but for all those around you.</p>
+                                    <p>I know I can and will never know all that you went through to get us to where we are today. All I can remember right now are all the happy childhood memories that you and Papa tried to give us.</p>     
+                                    <p>In our gatherings, Bro. Eli reminds us that newborn animals, when left on their own, has a possibility to survive on their own, but not humans. Babies need the nuture of parents to grow up. He helped me appreciate you more as a parent.</p>     
+                                    <p>Happy Mother's Day. I love you.</p>     
+                                    <p>I will always be your baby Onet.</p>
                                 </div>
                                 </fieldset>
                             </p>
@@ -210,9 +216,9 @@
                                 </fieldset>
                             </p>
                         </div>
-                        
+
                         <div id="nap" data-iziModal-fullscreen="true"  data-iziModal-title="The Bedroom"  data-iziModal-icon="icon-home"
-                            style="margin-left: 10px; margin-right: 10px" data-padding="10px">
+                            style="display: none; margin-left: 10px; margin-right: 10px" data-padding="10px">
                             <p></p>
                             <hr/>
                             <p>There seems to be a note stuck under the pillow. Would you like to take a look?</p>
@@ -263,7 +269,7 @@
                                         <p>Recess is a general term for a period in which a group of people are temporarily dismissed from their duties.</p>
                                         <p>This was and still your favorite subject in school.</p>
 				                    </li>   
-				                    <li id="nap-li" >
+				                    <li id="nap-li" style="display: none">
 					                    <img src="images/mama/sleepy.jpg" alt="Take a Nap" />
                                         <h3>
                                             <a id="nap-trigger" data-izimodal-open="#nap" data-izimodal-transitionin="comingIn">
@@ -534,7 +540,7 @@
             $(this).find('.hider').toggle();
         });
         function displayHappyMama() {
-            if(count >= 4) {
+            if(count >= 3) {
                 setTimeout(function() {
                     $('#happy-mama-li').show();
                 }, 3000)
